@@ -42,6 +42,17 @@ header{
     font-weight: 500;
     font-size: 18px;
 }
+.menu-logo img{
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+.menu-logo img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
 .btn-user{
     background: transparent;
     border-radius: 6px;
