@@ -1,0 +1,75 @@
+/*Estilos para a página de jogos*/
+
+#jogos{
+    scroll-margin-top: 140px; /* altura do header + folga */
+}
+
+.container-jogos{
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+}
+
+.card-jogos {
+    background-color: #121212;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-jogos:hover{
+    transform: translateY(-6px);
+}
+
+.card-jogos img{
+    width: 100%;
+    display: block;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-jogos{
+    padding: 10px 15px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-jogos h3{
+    background-color: #880505;
+    font-size: 12px;
+    margin: 0;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.info-jogos h2{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.info-jogos hr{
+    border: none;
+    border-top: 1px solid #fff;
+    width: 90%;
+    margin: 4px auto;
+}
+
+.info-jogos p{
+    font-size: 12px;
+    color: #bdbdbd;
+    margin: 0;
+}
+
+.info-jogos h3, h2{
+    margin: 0;
+}
