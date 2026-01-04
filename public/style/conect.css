@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Medidas das bordas é contada junto com as medidas de altura e largura.*/
+}
+
+body {
+    background-color: #ecf0f1;
+       background-image: url(../assets/imgLoginEscuraMaior.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    border-radius: 15px;
+    background-color: #fff;
+    width: 860px;
+    height: 70%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    width: 48%;
+    height: 100%;
+    background-image: url(../assets/imgCad.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 15px; /*estou definindo borda do nesses locais*/
+    border-bottom-left-radius: 15px;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: capitalize; /*Deixa as iniciais em maúscula*/
+}
+
+.title-welcome {
+    color: #fff;
+}
+
+.title-second {
+    color: rgb(16, 92, 92);
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 15px;
+}
+
+.description-primary {
+    color: #fff;
+}
+
+.description-second {
+    color: #7f8c8d;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 25px;
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    margin-top: 1rem;
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+
+.btn-primary:hover {
+    background-color: #701b1b;
+    border: 1px solid #701b1b;
+    color: #fff;
+    transition: 1.3s;
+}
+
+.btn-acessar {
+     background-color: #701b1b;
+    border: 1px solid #701b1b;
+   
+    color: rgb(255, 255, 255);
+}
+
+.btn-acessar:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: #fff;
+    transition: 1.3s;
+}
+
+.btn-second {
+    border: 1px solid black;
+    color: #7f8c8d;
+}
+
+.btn-second:hover {
+    background-color: #7f8c8d;
+    color: #ecf0f1;
+    transition: 0.5s;
+}
+
+.first-content {
+    display: flex;
+    /*position: relative;*/
+
+}
+
+.first-content .second-content {
+    z-index: 16;
+}
+
+.first-column {
+    text-align: center;
+    width: 50%;
+    z-index: 8;
+}
+
+.second-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.list-social-media {
+    display: flex;
+    list-style-type: none;
+}
+
+/* 
+.social-media {
+margin: 1rem 0;
+}
+
+Estilização dos icone retirados
+ .item-social-media {
+    border: 1px solid #bdc3c7;
+    background-color: rgba(0, 0, 0, 0.438);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px; /*para centralizar os icones q vamos colocar
+    text-align: center;
+
+ }
+ 
+ .list-social-media:not(:first-child) { aq estou dizendo que o primeiro elemento filho n vai recer a margin de 10px so os dmais..
+    margin-left: 10px;
+}
+
+.list-social-media a{
+    color: #ecf0f1;
+}
+*/
+
+.form { 
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input {
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+}
+
+/*Em alguns navegadores muda a cor do css. dito isso, esse comando é para que tenha as infos adequadas e colocadas.
+input:-webki-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: black !important;
+}
+*/
+
+.label-input {
+    border-radius: 12px;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 6px;
+}
+
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+/*Segundo conteúdo*/
+
+.second-content {
+    position: absolute;
+    display: flex;
+}
+
+.second-content .first-column {
+    order: 2;
+    z-index: -1;
+}
+
+.second-content .second-column{
+    order: 1;
+    z-index: -1;
+}
+
+.create {
+    color: #7f8c8d;
+    text-decoration: none;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/*Deixar apenas a primeira letra maiuscula!*/
+.create::first-letter {
+    text-transform: capitalize;
+}
+
+.sign-in-js .first-content .first-column {
+    z-index: -1;
+}
+
+.sign-in-js .second-content .second-column {
+    z-index: 25;
+}
+
+/*Separei essa parte para que apareça por baixo do hello, mas por cima do forms*/
+.sign-in-js .second-content .first-column {
+    z-index: 60;
+}
+
+.sign-in-js .content::before {
+    left: 55%;
+    /*Estamos aredondando as bordas opostas o:
+    border-top-leftradius: 0
+    border-bottom-leftradius: 0
+    mas nn coloquei pq gostei do outro jeito.*/
+     border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /*Estou chamando a animação e o tempo*/
+    animation: slidein 4s;
+
+    z-index: 45;
+}
+
+.sign-up-js .content::before {
+    animation: slideout 3s;
+    z-index: 45;
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.sign-up-js .first-content .second-column {
+    z-index: 25;
+}
+
+.sign-up-js .first-content .first-column {
+    z-index: 60;
+}
+
+/*DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
+
+.sign-in-js .first-content .second-column {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsquerda 3s;
+}
+
+.sign-up-js .second-content .second-column {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDireita 3s;
+}
+
+/*Animação CSS*/
+
+@keyframes slidein {
+
+    /*De onde ele vai*/
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    /*O que vai fazer quando der 25%*/
+    25% {
+        left: 15%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 54%;
+        width: 48%;
+    }
+
+    /*Onde ele para*/
+    to {
+        left: 55%;
+        width: 45%;
+    }
+}
+
+@keyframes slideout {
+
+    /*De onde ele vai*/
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    /*O que vai fazer quando der 25%*/
+    25% {
+        left: 5%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 5%;
+        width: 48%;
+    }
+
+    /*Onde ele para*/
+    to {
+        left: 0%;
+        width: 40%;
+    }
+}
+
+@keyframes deslocamentoEsquerda {
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 40;
+    }
+
+    25% {
+        left: -80px;
+        opacity: .3;
+    }
+
+    50% {
+        left: -100px;
+        opacity: .1;
+    }
+
+    to {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoDireita {
+    from {
+    left: 0;
+    z-index: 40;
+    }
+
+    25% {
+    left: 80px;
+    }
+
+    50% {
+    left: 100px;
+    }
+
+    to {
+    left: 110px;
+    z-index: -1;
+    }
+}
